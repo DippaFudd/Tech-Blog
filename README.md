@@ -47,21 +47,21 @@ Tech-Blog is a CMS-style blog application where developers can publish their pos
 
 ## Installation
 
-- 1.Clone Repo
-- 2.Cd Tech-Blog 
-- 3.npm intsall 
-- 4.Create .env file :
+- 1. Clone Repo
+- 2. Cd Tech-Blog 
+- 3. npm intsall 
+- 4. Create .env file :
 - DB_NAME=tech_blog_db
 - DB_USER=<your_mysql_username>
 - DB_PASSWORD=<your_mysql_password>
-- 5.npm node seeds/seed.js or npm run seed
+- 5. npm node seeds/seed.js or npm run seed
 - 6. open browswer to http://localhost:3002
 
 ## Screenshots
-![image Alt]
-![image Alt]
-![image Alt]
-![image Alt]
+![image Alt](https://github.com/DippaFudd/Tech-Blog/blob/de3d8bda40356a792be4fa812245d3c0c35580fc/2025-03-27.png)
+![image Alt](https://github.com/DippaFudd/Tech-Blog/blob/de3d8bda40356a792be4fa812245d3c0c35580fc/2025-03-27%20(1).png)
+![image Alt](https://github.com/DippaFudd/Tech-Blog/blob/de3d8bda40356a792be4fa812245d3c0c35580fc/2025-03-27%20(2).png)
+![image Alt](https://github.com/DippaFudd/Tech-Blog/blob/de3d8bda40356a792be4fa812245d3c0c35580fc/2025-03-27%20(3).png)
 
 
 

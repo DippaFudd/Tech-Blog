@@ -1,0 +1,96 @@
+<header class="header">
+    <h1 class="site-title">Tech Blog</h1>
+</header>
+
+<section class="homepage card">
+    <div class="container">
+        <h2 class="section-title">Welcome to Tech Blog</h2>
+        <button id="add-post-btn" class="btn-home">Add Post</button>
+        <div class="posts-grid">
+            {{#each posts}}
+            <article class="post card" data-id="{{id}}">
+                <h3 class="post-title"><a href="/post/{{id}}">{{title}}</a></h3>
+                <p class="post-meta">Posted by <strong>{{user.username}}</strong> on {{format_date createdAt}}</p>
+                <p class="post-content">{{content}}</p>
+                <button class="edit-post-btn btn-home">Edit</button>
+            </article>
+            {{/each}}
+            <!-- Placeholder for dynamically added posts -->
+        </div>
+    </div>
+</section>
+
+<style>
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 2rem;
+        background: #000000;
+        color: white;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+    }
+    .site-title {
+        font-size: 1.5rem;
+        font-family: 'Arial', sans-serif;
+    }
+    .btn-home {
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+    .btn-home:hover {
+        background-color: #0056b3;
+    }
+    .homepage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: linear-gradient(135deg, #000000, #007bff);
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        max-width: 800px;
+        width: 100%;
+        text-align: center;
+    }
+    .section-title {
+        font-family: 'Arial', sans-serif;
+        color: white;
+        margin-bottom: 1rem;
+    }
+    .posts-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        width: 100%;
+    }
+    .post.card {
+        flex: 1 1 calc(45% - 1rem);
+        background: white;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .post-title a {
+        color: #333;
+        text-decoration: none;
+    }
+    .post-title a:hover {
+        color: #007bff;
+    }
+    .post-meta {
+        font-size: 0.9rem;
+        color: #555;
+    }
+</style>

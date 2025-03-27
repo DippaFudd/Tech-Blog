@@ -1,0 +1,98 @@
+<header class="header">
+    <h1 class="site-title">Tech Blog</h1>
+</header>
+
+<section class="dashboard">
+    <div class="container">
+        <h2 class="section-title">Your Posts</h2>
+
+        <div class="posts-grid">
+            {{#each posts}}
+            <article class="post card">
+                <h3 class="post-title"><a href="/dashboard/edit/{{id}}">{{title}}</a></h3>
+                <p class="post-content">{{content}}</p>
+                <div class="post-actions">
+                    <a href="/post/{{id}}" class="btn btn-link">View Full Post & Comments</a>  
+                    <button class="btn btn-danger delete-post" data-id="{{id}}">Delete</button>
+                </div>
+            </article>
+            {{/each}}
+        </div>
+
+        <h2 class="section-title">Create a New Post</h2>
+        <form class="new-post-form card">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" class="input-text" required>
+
+            <label for="content">Content</label>
+            <textarea id="content" name="content" class="input-textarea" required></textarea>
+
+            <button type="submit" class="btn btn-primary">Add Post</button> 
+        </form>
+    </div>
+</section>
+
+<script src="/js/newPost.js"></script>
+<script src="/js/dashboard.js"></script>
+
+<style>
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 2rem;
+        background: #000000;
+        color: white;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+    }
+    
+    .btn-home:hover {
+        background-color: #0056b3;
+    }
+    .dashboard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: linear-gradient(135deg, #000000, #007bff);
+        padding: 2rem;
+        border-radius: 10px;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        max-width: 800px;
+        width: 100%;
+    }
+    .section-title {
+        font-family: 'Arial', sans-serif;
+        color: white;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    .posts-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+    .post.card {
+        flex: 1 1 calc(45% - 1rem);
+        background: white;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .btn-primary {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+</style>

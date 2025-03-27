@@ -58,3 +58,12 @@ app.use((err, req, res, next) => {
     console.error(' Server Error:', err);
     res.status(500).json({ message: 'Internal server error' });
 });
+
+const sequelize = new Sequelize({
+    dialect: 'postgres',
+    host: '127.0.0.1',
+    port: 5432,
+    username: 'postgres',
+    password: 'Blackboy78!',
+    database: 'tech_blog_db',
+  });

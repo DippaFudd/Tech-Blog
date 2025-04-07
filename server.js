@@ -14,7 +14,7 @@ const routes = require('./controllers');
 const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 5432; // Use 5432 for PostgreSQL
 
 const hbs = exphbs.create({ helpers });
 
